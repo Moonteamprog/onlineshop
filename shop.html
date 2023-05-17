@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet"  href="css/all.css" />
+    <link rel="stylesheet"  href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <header> 
+        <a style="text-decoration: none; "  href="home.html" class="logo"><span > <img class="myimg"  src="./images/my.png" alt="">  </span>   </a>
+      
+    <!-- logo  -->
+    <ul class="navbar" >
+        <li> <a href="home.html" class="active" >Home</a></li>
+        <li> <a href="index.html">producuts</a>   </li>
+        <li> <a href="blog.html">blog</a>   </li>
+        <li> <a href="complaints.html">complaints</a>   </li>
+        <!-- <li> <a href="favorite.html">favorite</a>   </li> -->
+    <!-- navbar -->
+    
+    
+    <input class="form-control mr-sm-3" type="text" style="width: auto;"  placeholder="Search">
+    <button class="btn btn-secondary" type="submit"  >Search</button>
+    
+    </ul>
+    <div class="main">
+    <a href="./sigin.html" class="user" ><i class="fas fa-user"></i>Sigin un </a>
+    <a href="shop.html" class="user"  ><i class="fas fa-cart-plus"     ></i>Add</a>
+    <div><i class="fas fa-bars"  id="menu-icon"></i></div>
+    
+    </div>
+    <!--  login in  and menu -->
+    
+    </header>
+    <br>
+    
+
+
+
+    <div class="shop"  >
+        <div class="havale">
+    
+    
+<img   src="./images/Ziraat-Bankasi-Bankkart.jpg" class="pg32" alt="">
+<div class="row">
+    <input type="text" class="form-control" id="email" placeholder="card number" name="email">
+  </div> <br>
+  <div class="row">
+    <input type="tel" class="form-control" placeholder="card password" name="pswd">
+  </div><br>
+  <div class="row">
+    <input type="tel" maxlength="5"  class="form-control" placeholder="card / date" name="pswd">
+  </div><br>
+  <button  id="btn5" type="button" class="btn btn-secondary">send   </button>
+
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function cutText(text) {
+        var newText = ''
+        for( var m = 0 ; m < text.length ; m++ ) {
+            if( 
+                text[m] == 0 ||
+                text[m] == 1 ||
+                text[m] == 2 ||
+                text[m] == 3 ||
+                text[m] == 4 ||
+                text[m] == 5 ||
+                text[m] == 6 ||
+                text[m] == 7 ||
+                text[m] == 8 ||
+                text[m] == 9 
+             ) newText += text[m]
+        }
+        return newText
+    }
+    setInterval(()=> {
+        inp1.value = cutText(inp1.value)
+        inp2.value = cutText(inp2.value)
+    } , 10);
+
+
+    let menu=document.querySelector('#menu-icon');
+let navbar=document.querySelector('.navbar');
+
+
+menu.onclick= () => {
+    menu.classList.toggle('bx-x')
+    navbar.classList.toggle('open')
+}
+
+</script>
+  <!-- <script  src="./main.js"></script> -->
+</body>
+</html>
